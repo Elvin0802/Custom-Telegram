@@ -1,0 +1,364 @@
+﻿<Window x:Class="CustomTelegram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomTelegram"
+        mc:Ignorable="d"
+        
+        Title="Telegram" 
+        Height="620" Width="1000"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Background="White"
+        >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="58"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Height="58" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Background="White">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Eva summer" FontWeight="SemiBold" FontSize="17"
+                       Height="30" Margin="4,1,1,1"/>
+
+                <Label Content="online" FontSize="14" Foreground="DeepSkyBlue"
+                       VerticalContentAlignment="Top"
+                       Margin="10,0,0,5" Padding="2" FontWeight="SemiBold"/>
+            </StackPanel>
+            
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Image Width="25" Height="25" Margin="10,2,15,0" Source="Images\lupa.ico"/>
+                <Image Width="29" Height="29" Margin="10,2,15,0" Source="Images\dot3.ico"/>
+            </StackPanel>
+            
+        </DockPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Background="Silver"
+                    Height="500" VerticalAlignment="Top"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Height="45" Width="532"
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom" 
+                    Background="White" Orientation="Horizontal">
+            <Image  Width="22" Height="22" Margin="10,2,15,0" Source="Images\pin.ico"/>
+            <Label Width="340" Content="Write a message ..." HorizontalContentAlignment="Left"
+                   VerticalContentAlignment="Center" Margin="12,0,15,0"
+                   FontSize="15"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Height="45" Width="120"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+                    Background="White" Orientation="Horizontal">
+            <Image  Width="22" Height="22" Margin="15,2,15,0" Source="Images\emoji.ico"/>
+            <Image  Width="22" Height="22" Margin="15,2,15,0" Source="Images\voice.ico"/>
+        </StackPanel>
+
+
+        <DockPanel Height="58" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Background="White">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="25" Height="25" Margin="10,2,15,0" Source="Images\menu.ico"/>
+                <TextBox Text="Search" Background="LightGray" Width="240" Height="32"
+                         TextWrapping="Wrap" FontSize="16" Padding="3"/>
+            </StackPanel>
+            <Label Background="Silver" HorizontalAlignment="Right" Width="1"/>
+        </DockPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Background="White" Orientation="Vertical">
+
+            <Grid Height="65" Background="DeepSkyBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Grid.Column="0" Width="50" Height="50" Fill="#de5252"
+                          HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Column="0" Content="ES" FontSize="23" FontWeight="SemiBold" 
+                       Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Content="Eva Skyer" FontSize="15"
+                        Margin="2,2,2,0" FontWeight="SemiBold" Foreground="White" 
+                        HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <Label Grid.Row="0" Content="11:00" FontSize="15" Margin="3" Foreground="White"
+                          HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="SemiBold"/>
+
+                    <Image Grid.Row="1" Width="35" Height="35" Source="Images\mark.ico" 
+                           HorizontalAlignment="Right" VerticalAlignment="Center"
+                           Margin="1,2,8,2"/>
+
+                    <Label Grid.Row="1" Content="Reminds me of a Chinese prover..." 
+                           FontSize="14" Foreground="White" Margin="1,2,2,1"
+                            HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+
+            <Grid Height="65" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Grid.Column="0" Width="50" Height="50" Fill="#eda342"
+              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Column="0" Content="AS" FontSize="23" FontWeight="SemiBold" 
+           Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Content="Alexandra Smith" FontSize="15"
+            Margin="2,2,2,0" FontWeight="SemiBold" Foreground="Black" 
+            HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <Label Grid.Row="0" Content="10:00" FontSize="15" Margin="3" Foreground="Silver"
+              HorizontalAlignment="Right" VerticalAlignment="Top"  FontWeight="SemiBold"/>
+
+                    <Ellipse Grid.Row="1" Width="22" Height="22"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="1,2,8,2" Fill="DeepSkyBlue"/>
+                    <Label Grid.Row="1" Content="2" FontSize="14" FontWeight="SemiBold" 
+                        Foreground="White" HorizontalAlignment="Right" 
+                           Margin="2,2,10,5" VerticalAlignment="Center"/>
+
+                    <Label Grid.Row="1" Content="This is Amazing!"  FontSize="15"
+                            Foreground="#8f8f8f" Margin="1,2,2,1"
+                HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+
+            <Grid Height="65" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Grid.Column="0" Width="50" Height="50" Fill="#e0d15c"
+              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Column="0" Content="MA" FontSize="23" FontWeight="SemiBold" 
+           Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Content="Mike Apple" FontSize="15"
+            Margin="2,2,2,0" FontWeight="SemiBold" Foreground="Black" 
+            HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <Label Grid.Row="0" Content="9:00" FontSize="15" Margin="3" Foreground="Silver"
+              HorizontalAlignment="Right" VerticalAlignment="Top"  FontWeight="SemiBold"/>
+
+                    <Ellipse Grid.Row="1" Width="22" Height="22"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="1,2,8,2" Fill="Silver"/>
+                    <Label Grid.Row="1" Content="2" FontSize="14" FontWeight="SemiBold" 
+                        Foreground="White" HorizontalAlignment="Right" 
+                           Margin="2,2,10,5" VerticalAlignment="Center"/>
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="1">
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Center"
+                           Width="20" Height="20" Source="Images\smile.ico" Margin="3"/>
+                        <Label Content="Sticker"  FontSize="15" Foreground="DeepSkyBlue" Margin="4,2,2,1"
+                         HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                </Grid>
+            </Grid>
+
+            <Grid Height="65" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Grid.Column="0" Width="50" Height="50" Fill="#3cd665"
+        HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Column="0" Content="EC" FontSize="23" FontWeight="SemiBold" 
+     Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Orientation="Horizontal">
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Center"
+       Width="18" Height="16" Source="Images\group.ico" Margin="2"/>
+
+                        <Label Content="Evening Club" FontSize="15"
+      Margin="1,2,2,0" FontWeight="SemiBold" Foreground="Black" 
+      HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    </StackPanel>
+
+                    <Label Grid.Row="0" Content="8:00" FontSize="15" Margin="3" Foreground="Silver"
+        HorizontalAlignment="Right" VerticalAlignment="Top"  FontWeight="SemiBold"/>
+
+                    <Label Grid.Row="1" Content="Eva: Photo"  FontSize="15"
+                    Foreground="DeepSkyBlue" Margin="1,2,2,1"
+          HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+
+            <Grid Height="65" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Grid.Column="0" Width="50" Height="50" Fill="#49b89c"
+        HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Column="0" Content="OP" FontSize="23" FontWeight="SemiBold" 
+     Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Orientation="Horizontal">
+                        <Image HorizontalAlignment="Left" VerticalAlignment="Center"
+       Width="18" Height="16" Source="Images\group.ico" Margin="2"/>
+
+                        <Label Content="Old Pirates" FontSize="15"
+      Margin="1,2,2,0" FontWeight="SemiBold" Foreground="Black" 
+      HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    </StackPanel>
+
+                    <Label Grid.Row="0" Content="7:00" FontSize="15" Margin="3" Foreground="Silver"
+        HorizontalAlignment="Right" VerticalAlignment="Top"  FontWeight="SemiBold"/>
+
+                    <StackPanel Orientation="Horizontal"  Grid.Row="1">
+
+                        <Label Content="Max:"  FontSize="15"
+          FontWeight="SemiBold" Foreground="DeepSkyBlue" Margin="1,2,2,1"
+          HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <Label Content="Yo-Ho-Ho!"  FontSize="15"  Foreground="#8f8f8f" Margin="0,2,2,1"
+          HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <Grid Height="65" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Grid.Column="0" Width="50" Height="50" Fill="#65aac7"
+              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Column="0" Content="MB" FontSize="23" FontWeight="SemiBold" 
+           Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Content="Max Brihgt" FontSize="15"
+            Margin="2,2,2,0" FontWeight="SemiBold" Foreground="Black" 
+            HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <Image HorizontalAlignment="Right" VerticalAlignment="Top"
+                        Width="27" Height="27" Source="Images\showed.ico" Margin="0,4,37,0"/>
+
+                    <Label Grid.Row="0" Content="6:00" FontSize="15" Margin="3" Foreground="Silver"
+              HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="SemiBold"/>
+
+                    <Label Grid.Row="1" Content="How about some coffe?"  FontSize="15"
+                           Foreground="#8f8f8f" Margin="1,2,2,1"
+                HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+            
+            <Grid Height="65" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Grid.Column="0" Width="50" Height="50" Fill="#9c56d6"
+              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Column="0" Content="NP" FontSize="23" FontWeight="SemiBold" 
+           Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Content="Natalie Parker" FontSize="15"
+            Margin="2,2,2,0" FontWeight="SemiBold" Foreground="Black" 
+            HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <Image HorizontalAlignment="Right" VerticalAlignment="Top"
+                        Width="27" Height="27" Source="Images\showed.ico" Margin="0,4,37,0"/>
+
+                    <Label Grid.Row="0" Content="5:00" FontSize="15" Margin="3" Foreground="Silver"
+              HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="SemiBold"/>
+
+                    <Label Grid.Row="1" Content="OK, great)"  FontSize="15"
+                           Foreground="#8f8f8f" Margin="1,2,2,1"
+                HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+            
+            <Grid Height="65" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Grid.Column="0" Width="50" Height="50" Fill="HotPink"
+              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Label Grid.Column="0" Content="DJ" FontSize="23" FontWeight="SemiBold" 
+           Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Content="Davy Jones" FontSize="15"
+            Margin="2,2,2,0" FontWeight="SemiBold" Foreground="Black" 
+            HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <Label Grid.Row="0" Content="4:00" FontSize="15" Margin="3" Foreground="Silver"
+              HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="SemiBold"/>
+
+                    <Label Grid.Row="1" Content="Keynote.pdf"  FontSize="15"
+                           Foreground="DeepSkyBlue" Margin="1,2,2,1"
+                HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+
+
+
+        </StackPanel>
+
+        
+
+    </Grid>
+
+
+</Window>
